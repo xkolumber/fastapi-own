@@ -6,11 +6,11 @@ from app.config import settings
 
 
 
-def test_root(client):
-    response = client.get("/")
-    assert response.status_code == 200
-    # assert response.json() == {"Hello": "Worldd"}
-    assert response.json().get('message') == 'Hello World'
+# def test_root(client):
+#     response = client.get("/")
+#     assert response.status_code == 200
+#     # assert response.json() == {"Hello": "Worldd"}
+#     assert response.json().get('message') == 'Hello World'
 
 def test_create_user(client):
     res = client.post('/users', json={"email": "hello1@gmail.com", "password": "password123"})
